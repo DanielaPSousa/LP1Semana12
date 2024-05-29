@@ -7,11 +7,6 @@ namespace MultipleStuff
     {
        public void GetMinMax1(out double min, out double max)
         {
-            if (this.Count == 0)
-            {
-                throw new InvalidOperationException("A lista está vazia.");
-            }
-
             min = double.MaxValue;
             max = double.MinValue;
 
@@ -21,5 +16,10 @@ namespace MultipleStuff
                 if (num > max) max = num;
             } 
         }
-    }
+        public struct MinMax
+        {
+            public double Min { get; set; }
+            public double Max { get; set; }
+        }
+    }   
 }
