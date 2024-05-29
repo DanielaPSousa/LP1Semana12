@@ -34,5 +34,18 @@ namespace MultipleStuff
 
             return new MinMax { Min = min, Max = max };
         }
+        public (double min, double max) GetMinMax3()
+        {
+            double min = double.MaxValue;
+            double max = double.MinValue;
+
+            foreach (var num in this)
+            {
+                if (num < min) min = num;
+                if (num > max) max = num;
+            }
+
+            return (min, max);
+        }
     }   
 }
