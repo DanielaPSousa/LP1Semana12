@@ -22,6 +22,20 @@ namespace Palindrome
             {
                 return true;
             }
+
+            bool IsPalindromeRecursive(string s, int start, int end)
+            {
+                if (start >= end)
+                {
+                    return true;
+                }
+                if (s[start] != s[end])
+                {
+                    return false;
+                }
+                return IsPalindromeRecursive(s, start + 1, end - 1);
+            }
+            return IsPalindromeRecursive(str, 0, str.Length - 1);
         }    
     }
 }
